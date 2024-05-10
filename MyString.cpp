@@ -63,7 +63,7 @@ std::string String::truncateWithEllipsis(const std::string& input, size_t maxLen
         return input.substr(0, maxLength - 3) + "...";
     }
 }
-std::string String::intToHex(int value, bool uppercase ) {
+std::string String::     intToHex(int value, bool uppercase ) {
     std::stringstream ss;
     if (uppercase)
         ss << std::uppercase << std::hex << std::setw(2) << std::setfill('0') << value;

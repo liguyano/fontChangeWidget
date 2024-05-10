@@ -18,4 +18,5 @@ bool folderExists(const std::string& folderPath);
 bool copyFile(const char* sourceFile, const char* destinationFile);
 bool deleteFolder(const std::string& folderPath);
 std::string ReadFileContents(const std::string& filename);
+
 #endif //WBUILDER_MYFILE_H

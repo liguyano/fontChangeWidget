@@ -5,6 +5,7 @@
 #ifndef WBUILDER_STRING_H
 #define WBUILDER_STRING_H
 
+#define  StrContains(str,subStr) str.find(subStr) != std::string::npos
 #include <iostream>
 #include <sstream>
 #include <vector>

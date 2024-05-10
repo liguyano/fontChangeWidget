@@ -1,11 +1,11 @@
 from pypinyin import pinyin
 import pyperclip
-codetype='utf-8'
+codetype='gbk'
 
 #Shift_JIS ,GBK23001 , BIG5，utf-8,gbk
 
 if __name__ == '__main__':
-    a='''串口开启 准备开始握手'''.replace("\"","\\\"").encode(encoding=codetype)
+    a='''伔'''.replace("\"","\\\"").encode(encoding=codetype)
     print(str(a)[2:-1])
 
 

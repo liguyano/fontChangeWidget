@@ -12,7 +12,7 @@
 #include <string>
 #define key_exsist(m,k) m.find(k) != m.end()
 #define trs(k) key_exsist(trs[k],lang)?trs[k][lang].c_str():trs[k]["en_US"].c_str()
-#define trss(k) key_exsist(trs[k],lang)?trs[k][lang].c_str():trs[k]["en_US"].c_str()
+
 #define trQtInit()   QLocale systemLocale = QLocale::system();auto lang=systemLocale.name().toStdString();auto trs=readTranslationFile("tr.csv")
 #define trQtInitFromString()   QLocale systemLocale = QLocale::system();auto lang=systemLocale.name().toStdString();    auto str= readQStringFromQrc(":/images/tr.csv");auto trs=readTranslationFromString(str.toStdString())
 std::map<std::string,std::map<std::string ,std::string>> readTranslationFile(std::string fileName);

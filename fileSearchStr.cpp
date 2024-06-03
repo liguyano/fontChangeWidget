@@ -28,3 +28,23 @@ std::vector<MatchResult> searchDirectoryRecursively(std::string dirPath, const s
     }
     return results;
 }
+std::vector<MatchResult> searchSingleFile(std::string filePath, const std::string& targetStr)
+{ std::vector<MatchResult> results;
+    std::ifstream file(filePath);
+    if (file.is_open()) {
+        std::string line;
+        int lineNumber = 0;
+        auto p=String::replaceAllOccurrences(filePath,"\\","/");
+        p=String::getExtensionAfterLastDot(p,'/');
+        while (std::getline(file, line)) {
+            ++lineNumber;
+            if (line.find(targetStr) != std::string::npos) {
+                results.push_back({p, lineNumber, line,filePath});
+            }
+        }
+        file.close();
+    } else {
+        std::cerr << "Could not open the file: " << filePath << std::endl;
+    }
+    return results;
+}

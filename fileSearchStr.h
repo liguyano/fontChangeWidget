@@ -19,4 +19,5 @@ struct MatchResult {
     std::string fullPath;
 };
 std::vector<MatchResult> searchDirectoryRecursively(std::string dirPath, const std::string& targetStr);
+std::vector<MatchResult> searchSingleFile(std::string filePath, const std::string& targetStr);
 #endif //FILEEDITOR_FILESEARCHSTR_H
